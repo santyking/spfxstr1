@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfxstr-1-client-side-solution",
+    "id": "f97792ea-c7a2-4423-84d7-bdfd0c27cd8c",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.17.4"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfxstr1 description"
+      },
+      "longDescription": {
+        "default": "spfxstr1 description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfxstr-1 Feature",
+        "description": "The feature that activates elements of the spfxstr-1 solution.",
+        "id": "01aa9aef-c09f-4cf3-907b-4e88f37dc9b5",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfxstr-1.sppkg"
+  }
+}

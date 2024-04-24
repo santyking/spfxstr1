@@ -12,6 +12,7 @@ import * as strings from 'Spfxstr1WebPartStrings';
 
 export interface ISpfxstr1WebPartProps {
   description: string;
+  firstname:string;
 }
 
 export default class Spfxstr1WebPart extends BaseClientSideWebPart<ISpfxstr1WebPartProps> {
@@ -27,6 +28,7 @@ export default class Spfxstr1WebPart extends BaseClientSideWebPart<ISpfxstr1WebP
         <h2>Well done, ${escape(this.context.pageContext.user.displayName)}!</h2>
         <div>${this._environmentMessage}</div>
         <div>Web part property value: <strong>${escape(this.properties.description)}</strong></div>
+        <div>${escape(this.properties.firstname)}</div>
       </div>
       <div>
         <h3>Welcome to SharePoint Framework!</h3>
@@ -108,7 +110,7 @@ export default class Spfxstr1WebPart extends BaseClientSideWebPart<ISpfxstr1WebP
       pages: [
         {
           header: {
-            description: strings.PropertyPaneDescription
+            description: "This is hardcoded description"
           },
           groups: [
             {
@@ -116,6 +118,14 @@ export default class Spfxstr1WebPart extends BaseClientSideWebPart<ISpfxstr1WebP
               groupFields: [
                 PropertyPaneTextField('description', {
                   label: strings.DescriptionFieldLabel
+                })
+              ]
+            },
+            {
+              groupName: "Group Name",
+              groupFields: [
+                PropertyPaneTextField('firstname', {
+                  label: "First Name"
                 })
               ]
             }
